@@ -1,0 +1,19 @@
+---
+title: "An Outdated Consensus? Stability of Liberal Support Among Racialized Voters in Canada"
+author: "Rupinder Liddar, Nadjim Fréchet and Hubert Cadieux"
+abstract: "**Abstract**: To date, public opinion research in Canada has consistently shown strong support for the federal Liberal Party among racialized Canadians [@blais2005; @bilodeaukanji2010; @harell2013; @white2017]. However, we still lack a comprehensive understanding of the true strength of this party in relation to the other major Canadian parties among racialized voters. Using the unique Datagotchi panel dataset collected during the 2025 federal election and the Relative Confidence Index (RCI), an innovative measure of parties’ growth potential among voters, we assess the stability of the vote for the Liberal Party among racialized Canadians and compare it to that of white Canadians during this specific election. This paper facilitates a comprehensive evaluation of an established consensus in Canadian political science regarding the vitality of electoral democracy among a historically understudied, yet politically important group of voters. With the increasing diversity of racialized voters in recent elections, this research offers an initial assessment of the Liberal Party's actual support among this electorate."
+bibliography: references.bib
+format: pdf
+link-citations: true
+editor: visual
+---
+
+# Project:
+
+So far, the literature in political science has consistently shown that racialized minority voters primarily support the Liberal Party of Canada [see @blais2005; @bilodeaukanji2010; @harell2013; @white2017]. However, the reasons behind this pattern remain unclear [@blais2005; @harell2013]. Many factors, such as ideology or party mobilization, have yet to provide a clear explanation for the strong support that racialized Canadians show for the Liberals. One proposed explanation is ingroup social pressure, where racialized minorities with more racially homogeneous social networks or for whom their racial background is a key part of their identity, are more likely to feel pressured into voting for the Liberal Party [@harell2013; @ie2025; @white2017]. Further studies by @white2023 and @ie2025 also appear to support the effect of ingroup social pressure or the importance of ethnicity as an explanatory factor in the political behaviour of racialized Canadians. 
+
+Another reason, also supported by the literature, that may explain racialized Canadians' political preferences is the co-ethnic affinity towards the party candidate. Put simply, racialized Canadians feel a stronger connection to candidates sharing the same racial identity [see @besco2015; @besco2019; @goodyear2019; @ie2025]. Additionally, while Bouchard's [-@bouchard2022] study shows contradictory evidence, some studies indicate that racialized Canadian voters also feel affinity toward racialized candidates overall, even if they do not share the same racial background, forming what has been described as a rainbow coalition [@besco2015; @besco2019]. These studies suggest that the success or failure of the Liberal Party among racialized Canadians may be linked to the racial profile of the party's candidates in their electoral district. However, few studies have assessed the real impact of the racial identity of party candidates beyond survey experiments [see @besco2015; @besco2019; @besco2020; @goodyear2019; @ie2025]. Also, Lapointe, Ferland, and Turgeon's [-@lapointe2024] study suggests that racialized candidates are competing in electoral districts where their likelihood of winning is lower than that of White candidates, thereby reducing the significance of this factor in predicting the strong support for the Liberal Party among racialized Canadians.
+
+\clearpage
+
+# Bibliography
