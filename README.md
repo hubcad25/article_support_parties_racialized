@@ -29,7 +29,7 @@ This will download:
 Convert PDF codebook to markdown for easier exploration:
 
 ```bash
-python3 scripts/03_convert_codebook.py
+python3 scripts/02_convert_codebook.py
 ```
 
 Output: `data/raw/ces_2021/ces_2021_codebook.md`
@@ -39,7 +39,7 @@ Output: `data/raw/ces_2021/ces_2021_codebook.md`
 Clean data (SES variables):
 
 ```bash
-R --no-restore --no-save < scripts/02_clean_ces_2021.R
+R --no-restore --no-save < scripts/03_clean_ces_2021.R
 ```
 
 Output: `data/clean/ces_2021.rds`
@@ -54,8 +54,8 @@ data/
 
 scripts/         # Data processing scripts
   01_download_ces_2021.R
-  02_clean_ces_2021.R
-  03_convert_codebook.py
+  02_convert_codebook.py
+  03_clean_ces_2021.R
 
 R/              # R functions
   compute_rci.R
