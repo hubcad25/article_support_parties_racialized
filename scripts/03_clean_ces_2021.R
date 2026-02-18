@@ -131,5 +131,28 @@ df_clean$weight <- df_raw$pes21_weight_general_all
 cat("SES variables cleaned successfully\n")
 cat("Variables created: ses_gender, ses_age, ses_age_numeric, ses_education, ses_income, ses_language, ses_province, id_partisane, weight\n")
 
+# RACIAL IDENTITY VARIABLES TO CLEAN:
+# cps21_vismin_1: Arab
+# cps21_vismin_2: Asian
+# cps21_vismin_3: Black
+# cps21_vismin_4: Indigenous (First Nations, Métis, Inuit, etc.)
+# cps21_vismin_5: Latino/Latina
+# cps21_vismin_6: South Asian (East Indian, Pakistani, Sri Lankan, etc.)
+# cps21_vismin_7: Southeast Asian (Vietnamese, Cambodian, Laotian, Thai, etc.)
+# cps21_vismin_8: West Asian (Iranian, Afghan, etc.)
+# cps21_vismin_9: White
+# cps21_vismin_10: Other (cps21_vismin_10_TEXT)
+# cps21_vismin_11: None of the above
+# cps21_vismin_12: Prefer not to answer
+# pes21_ethid_1: Importance of being Canadian to identity (1-5 scale)
+# pes21_ethid_2: Importance of ethnicity to identity (1-5 scale)
+# pes21_ethid_3: Importance of language to identity (1-5 scale)
+# cps21_origin_1 to cps21_origin_5: Ethnic/cultural origins of ancestors (up to 5)
+# cps21_bornin_canada: Born in Canada (1=Yes, 2=No, 3=Don't know/Prefer not to say)
+# cps21_bornin_other: Country of birth (if not born in Canada)
+# cps21_imm_year: Year of immigration
+# cps21_immig_status: Immigration category (1=Skilled worker principal, 2=Skilled worker dependent, 3=Family class, etc.)
+# cps21_citizenship: Citizenship status (1=Canadian citizen, 2=Permanent resident, 3=Other)
+
 saveRDS(df_clean, "data/clean/ces_2021.rds")
 cat("Data saved to data/clean/ces_2021.rds\n")
