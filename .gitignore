@@ -1,3 +1,6 @@
+# Data directories (large files, not tracked in git)
+data/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
