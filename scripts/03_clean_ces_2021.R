@@ -131,6 +131,57 @@ df_clean$weight <- df_raw$pes21_weight_general_all
 cat("SES variables cleaned successfully\n")
 cat("Variables created: ses_gender, ses_age, ses_age_numeric, ses_education, ses_income, ses_language, ses_province, id_partisane, weight\n")
 
+# RCI (IRC - Indice de Relativité de Confiance) ---------------------------
+
+df_feelings <- df_raw |>
+  select(
+    feeling_liberal = cps21_party_rating_23,
+    feeling_conservative = cps21_party_rating_24,
+    feeling_ndp = cps21_party_rating_25,
+    feeling_bloc = cps21_party_rating_26,
+    feeling_green = cps21_party_rating_27
+  ) |>
+  mutate(
+    feeling_bloc = ifelse(is.na(feeling_bloc), 0, feeling_bloc),
+    across(
+      everything(),
+      ~case_when(
+        . == 998 ~ 0,
+        . == 999 ~ NA_integer_,
+        TRUE ~ .
+      )
+    ),
+    across(
+      starts_with("feeling"),
+      ~round(. / 10)
+    )
+  )
+
+df_feelings$id <- paste0("ces_2021_", 1:nrow(df_feelings))
+
+df_rci <- compute_rci(
+  df_feelings,
+  prefix = "feeling_",
+  id_col = "id"
+) |>
+  ungroup()
+
+rci_cols <- grep("^rci_", names(df_rci), value = TRUE)
+
+rows_with_na <- df_rci |>
+  select(all_of(rci_cols)) |>
+  apply(1, function(x) any(is.na(x)))
+
+df_rci[rows_with_na, rci_cols] <- NA
+
+df_clean <- df_clean |>
+  left_join(df_rci, by = "id") |>
+  mutate(
+    rci_bloc = ifelse(ses_province == "quebec", rci_bloc, NA)
+  )
+
+cat("RCI variables created:", paste(rci_cols, collapse = ", "), "\n")
+
 # RACIAL IDENTITY VARIABLES TO CLEAN:
 # cps21_vismin_1: Arab
 # cps21_vismin_2: Asian
